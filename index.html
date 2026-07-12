@@ -14,13 +14,20 @@
         <div class="header__container">
             <h1 class="header__logo">NextWave</h1>
 
-            <nav class="header__nav">
+            <nav class="header__nav" id="js-nav-menu">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#">Features</a></li>
-                    <li class="header__nav-item"><a href="#">Pricing</a></li>
-                    <li class="header__nav-item"><a href="#">FAQ</a></li>
+                    <li class="header__nav-item"><a href="#features">Features</a></li>
+                    <li class="header__nav-item"><a href="#pricing">Pricing</a></li>
+                    <li class="header__nav-item"><a href="#faq">FAQ</a></li>
                 </ul>
             </nav>
+
+            <button class="header__hamburger" id="js-hamburger-btn" aria-label="メニューを開く" aria-expanded="false"
+                aria-controls="navigation-panel">
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+            </button>
         </div>
     </header>
 
@@ -38,7 +45,7 @@
             </div>
         </section>
 
-        <section class="features">
+        <section id="features" class="features">
             <div class="section-container">
                 <h2 class="section-title">Features</h2>
                 <div class="features__grid">
@@ -73,7 +80,7 @@
             </div>
         </section>
 
-        <section class="pricing">
+        <section id="pricing" class="pricing">
             <div class="section-container">
                 <h2 class="section-title">Pricing</h2>
                 <div class="pricing__tabs" role="tablist">
@@ -143,7 +150,7 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section id="faq" class="faq">
             <div class="section-container">
                 <h2 class="section-title">FAQ</h2>
                 <dl class="faq__list">
@@ -204,7 +211,7 @@
         </div>
     </footer>
 
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
 </body>
 
 </html>
