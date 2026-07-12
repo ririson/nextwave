@@ -27,29 +27,181 @@
     <main>
 
         <section class="hero">
-
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h2 class="hero__content-title">次世代のWeb体験をあなたに</h2>
+                    <p class="hero__content-description">
+                        圧倒的なパフォーマンスと美しいデザインで、ビジネスを加速させます。
+                    </p>
+                    <button class="btn btn--primary">今すぐ始める</button>
+                </div>
+            </div>
         </section>
 
         <section class="features">
-
+            <div class="section-container">
+                <h2 class="section-title">Features</h2>
+                <div class="features__grid">
+                    <article class="feature-card">
+                        <figure class="feature-card__figure">
+                            <span class="feature-card__icon" role="img" aria-label="ロケット">🚀</span>
+                            <figcaption>
+                                <h3 class="feature-card__title">超高速レスポンス</h3>
+                            </figcaption>
+                        </figure>
+                        <p class="feature-card__description">最新の技術スタックにより、待ち時間のない快適な操作性を実現します。</p>
+                    </article>
+                    <article class="feature-card">
+                        <figure class="feature-card__figure">
+                            <span class="feature-card__icon" role="img" aria-label="鍵">🔒</span>
+                            <figcaption>
+                                <h3 class="feature-card__title">強固なセキュリティ</h3>
+                            </figcaption>
+                        </figure>
+                        <p class="feature-card__description">エンタープライズレベルのセキュリティであなたのデータを守ります。</p>
+                    </article>
+                    <article class="feature-card">
+                        <figure class="feature-card__figure">
+                            <span class="feature-card__icon" role="img" aria-label="キラキラ">✨</span>
+                            <figcaption>
+                                <h3 class="feature-card__title">直感的なデザイン</h3>
+                            </figcaption>
+                        </figure>
+                        <p class="feature-card__description">誰でも迷わず使える、洗練されたユーザーインターフェース。</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <section class="pricing">
+            <div class="section-container">
+                <h2 class="section-title">Pricing</h2>
+                <div class="pricing__tabs" role="tablist">
+                    <button class="pricing__tab-btn is-active" role="tab" aria-selected="true"
+                        aria-controls="plan-monthly" data-target="monthly">月額払い</button>
+                    <button class="pricing__tab-btn" role="tab" aria-selected="false"
+                        aria-controls="plan-annual">年額払い</button>
+                </div>
 
+                <div class="pricing__panels" role="tabpanel" aria-labelledby="plan-monthly">
+                    <article class="pricing-card">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Basic</h3>
+                            <p class="pricing-card__price">¥1,000<span class="pricing-card__price-suffix">/月</span></p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">基本機能</li>
+                            <li class="pricing-card__feature">1ユーザー</li>
+                        </ul>
+                        <button class="btn btn--outline">選択する</button>
+                    </article>
+
+                    <article class="pricing-card pricing-card--popular">
+                        <strong class="pricing-card__badge">おすすめ</strong>
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Pro</h3>
+                            <p class="pricing-card__price">¥3,000<span class="pricing-card__price-suffix">/月</span></p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">全機能アクセス</li>
+                            <li class="pricing-card__feature">5ユーザー</li>
+                            <li class="pricing-card__feature">優先サポート</li>
+                        </ul>
+                        <button class="btn btn--primary">選択する</button>
+                    </article>
+                </div>
+
+                <div class="pricing__panels is-hidden" id="plan-annual" role="tabpanel" aria-hidden="true"
+                    aria-labelledby="plan-annual">
+                    <article class="pricing-card">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Basic (年額)</h3>
+                            <p class="pricing-card__price">¥10,000<span class="pricing-card__price-suffix">/年</span></p>
+                            <p class="pricing-card__discount"><strong>2ヶ月分お得！</strong></p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">基本機能</li>
+                            <li class="pricing-card__feature">1ユーザー</li>
+                        </ul>
+                        <button class="btn btn--outline">選択する</button>
+                    </article>
+                    <article class="pricing-card pricing-card--popular">
+                        <strong class="pricing-card__badge">おすすめ</strong>
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Pro (年額)</h3>
+                            <p class="pricing-card__price">¥30,000<span class="pricing-card__price-suffix">/年</span></p>
+                            <p class="pricing-card__discount"><strong>2ヶ月分お得！</strong></p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">全機能アクセス</li>
+                            <li class="pricing-card__feature">5ユーザー</li>
+                            <li class="pricing-card__feature">優先サポート</li>
+                        </ul>
+                        <button class="btn btn--primary">選択する</button>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <section class="faq">
-
+            <div class="section-container">
+                <h2 class="section-title">FAQ</h2>
+                <dl class="faq__list">
+                    <div class="faq__item">
+                        <dt>
+                            <button class="faq__question" aria-expanded="false">
+                                無料トライアルはありますか？
+                                <span class="faq__icon" aria-hidden="true">+</span>
+                            </button>
+                        </dt>
+                        <dd class="faq__answer">
+                            <p>はい、14日間の無料トライアルをご用意しております。クレジットカードの登録なしで開始できます。</p>
+                        </dd>
+                    </div>
+                    <div class="faq__item">
+                        <dt>
+                            <button class="faq__question" aria-expanded="false">
+                                解約はいつでもできますか？
+                                <span class="faq__icon" aria-hidden="true">+</span>
+                            </button>
+                        </dt>
+                        <dd class="faq__answer">
+                            <p>いつでもマイページから簡単に解約手続きが可能です。違約金等は一切発生しません。</p>
+                        </dd>
+                    </div>
+                    <div class="faq__item">
+                        <dt>
+                            <button class="faq__question" aria-expanded="false">
+                                サポート体制はどうなっていますか？
+                                <span class="faq__icon" aria-hidden="true">+</span>
+                            </button>
+                        </dt>
+                        <dd class="faq__answer">
+                            <p>Basicプランはメールサポート（営業日対応）、Proプランは24時間チャットサポートをご利用いただけます。</p>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
         </section>
 
         <section class="cta">
-
+            <div class="section-container">
+                <h2 class="cta__title">ご不明な点がありますか？</h2>
+                <p class="cta__description">お気軽にお問い合わせください。専門スタッフが丁寧にお答えします。</p>
+                <button class="btn btn--primary js-open-modal">お問い合わせ</button>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__brand">NextWave</p>
+            <address class="footer__contact">
+                お問い合わせ: <a href="mailto:info@nextwave-example.com">info@nextwave-example.com</a>
+            </address>
+            <p><small>&copy; <time datetime="2026">2026</time> NextWave All Rights Reserved.</small></p>
+        </div>
     </footer>
 
     <!-- <script src="main.js"></script> -->
