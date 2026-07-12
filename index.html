@@ -74,7 +74,73 @@
         </section>
 
         <section class="pricing">
+            <div class="section-container">
+                <h2 class="section-title">Pricing</h2>
+                <div class="pricing__tabs" role="tablist">
+                    <button class="pricing__tab-btn is-active" role="tab" aria-selected="true"
+                        aria-controls="plan-monthly" data-target="monthly">月額払い</button>
+                    <button class="pricing__tab-btn" role="tab" aria-selected="false"
+                        aria-controls="plan-annual">年額払い</button>
+                </div>
 
+                <div class="pricing__panels" role="tabpanel" aria-labelledby="plan-monthly">
+                    <article class="pricing-card">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Basic</h3>
+                            <p class="pricing-card__price">¥1,000<span class="pricing-card__price-suffix">/月</span></p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">基本機能</li>
+                            <li class="pricing-card__feature">1ユーザー</li>
+                        </ul>
+                        <button class="btn btn--outline">選択する</button>
+                    </article>
+
+                    <article class="pricing-card pricing-card--popular">
+                        <strong class="pricing-card__badge">おすすめ</strong>
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Pro</h3>
+                            <p class="pricing-card__price">¥3,000<span class="pricing-card__price-suffix">/月</span></p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">全機能アクセス</li>
+                            <li class="pricing-card__feature">5ユーザー</li>
+                            <li class="pricing-card__feature">優先サポート</li>
+                        </ul>
+                        <button class="btn btn--primary">選択する</button>
+                    </article>
+                </div>
+
+                <div class="pricing__panels is-hidden" id="plan-annual" role="tabpanel" aria-hidden="true"
+                    aria-labelledby="plan-annual">
+                    <article class="pricing-card">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Basic (年額)</h3>
+                            <p class="pricing-card__price">¥10,000<span class="pricing-card__price-suffix">/年</span></p>
+                            <p class="pricing-card__discount"><strong>2ヶ月分お得！</strong></p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">基本機能</li>
+                            <li class="pricing-card__feature">1ユーザー</li>
+                        </ul>
+                        <button class="btn btn--outline">選択する</button>
+                    </article>
+                    <article class="pricing-card pricing-card--popular">
+                        <strong class="pricing-card__badge">おすすめ</strong>
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title">Pro (年額)</h3>
+                            <p class="pricing-card__price">¥30,000<span class="pricing-card__price-suffix">/年</span></p>
+                            <p class="pricing-card__discount"><strong>2ヶ月分お得！</strong></p>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">全機能アクセス</li>
+                            <li class="pricing-card__feature">5ユーザー</li>
+                            <li class="pricing-card__feature">優先サポート</li>
+                        </ul>
+                        <button class="btn btn--primary">選択する</button>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <section class="faq">
