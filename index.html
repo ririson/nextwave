@@ -14,13 +14,20 @@
         <div class="header__container">
             <h1 class="header__logo">NextWave</h1>
 
-            <nav class="header__nav">
+            <nav class="header__nav" id="js-nav-menu">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#">Features</a></li>
-                    <li class="header__nav-item"><a href="#">Pricing</a></li>
-                    <li class="header__nav-item"><a href="#">FAQ</a></li>
+                    <li class="header__nav-item"><a href="#features">Features</a></li>
+                    <li class="header__nav-item"><a href="#pricing">Pricing</a></li>
+                    <li class="header__nav-item"><a href="#faq">FAQ</a></li>
                 </ul>
             </nav>
+
+            <button class="header__hamburger" id="js-hamburger-btn" aria-label="メニューを開く" aria-expanded="false"
+                aria-controls="navigation-panel">
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+            </button>
         </div>
     </header>
 
@@ -38,7 +45,7 @@
             </div>
         </section>
 
-        <section class="features">
+        <section id="features" class="features">
             <div class="section-container">
                 <h2 class="section-title">Features</h2>
                 <div class="features__grid">
@@ -73,17 +80,17 @@
             </div>
         </section>
 
-        <section class="pricing">
+        <section id="pricing" class="pricing">
             <div class="section-container">
                 <h2 class="section-title">Pricing</h2>
                 <div class="pricing__tabs" role="tablist">
                     <button class="pricing__tab-btn is-active" role="tab" aria-selected="true"
                         aria-controls="plan-monthly" data-target="monthly">月額払い</button>
-                    <button class="pricing__tab-btn" role="tab" aria-selected="false"
-                        aria-controls="plan-annual">年額払い</button>
+                    <button class="pricing__tab-btn" role="tab" aria-selected="false" aria-controls="plan-annual"
+                        data-target="annual">年額払い</button>
                 </div>
 
-                <div class="pricing__panels" role="tabpanel" aria-labelledby="plan-monthly">
+                <div class="pricing__panels" id="plan-monthly" role="tabpanel" aria-labelledby="plan-monthly">
                     <article class="pricing-card">
                         <div class="pricing-card__header">
                             <h3 class="pricing-card__title">Basic</h3>
@@ -143,7 +150,7 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section id="faq" class="faq">
             <div class="section-container">
                 <h2 class="section-title">FAQ</h2>
                 <dl class="faq__list">
@@ -204,7 +211,34 @@
         </div>
     </footer>
 
-    <!-- <script src="main.js"></script> -->
+    <div class="modal" id="js-contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <div class="modal__container">
+            <button class="modal__close" id="js-modal-close" aria-label="閉じる">&times;</button>
+            <h2 class="modal__title" id="modal-title">お問い合わせ</h2>
+            <form class="modal__form" id="contact-form">
+                <div class="form-group">
+                    <label class="form-group__label" for="contact-name">お名前</label>
+                    <input class="form-group__input" type="text" id="contact-name" name="name" placeholder="山田 太郎"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label class="form-group__label" for="contact-email">メールアドレス</label>
+                    <input class="form-group__input" type="email" id="contact-email" name="email"
+                        placeholder="example@test.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-group__label" for="contact-message">お問い合わせ内容</label>
+                    <textarea class="form-group__input" id="contact-message" name="message" rows="4"
+                        placeholder="ご質問を入力してください" required></textarea>
+                </div>
+                <button class="btn btn--primary btn--block" type="submit">送信する</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
