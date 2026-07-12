@@ -464,6 +464,15 @@ dl {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+.faq__item.is-open .faq__answer {
+    max-height: 300px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.faq__item.is-open .faq__icon {
+    transform: rotate(45deg);
+}
+
 .faq__question {
     width: 100%;
     text-align: left;
@@ -494,7 +503,7 @@ dl {
 }
 
 .faq__answer p {
-    padding: 0 20px 20px;
+    padding: 20px;
     color: var(--color-text-muted);
     line-height: 1.7;
 }

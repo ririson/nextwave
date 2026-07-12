@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     tabButtons.forEach((tabBtn) => {
         tabBtn.addEventListener('click', () => {
 
-            console.log("あああ");
             const { target } = tabBtn.dataset;
 
             for (const btn of tabButtons) {
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             for (const panel of tabPanels) {
-                console.log(panel);
                 panel.classList.add('is-hidden');
                 panel.setAttribute('aria-hidden', 'true');
             }
@@ -37,6 +35,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
             targetPanel?.classList.remove('is-hidden');
             targetPanel?.setAttribute('aria-hidden', 'false');
+        });
+    });
+
+    const faqQuestions = document.querySelectorAll('.faq__question');
+
+    faqQuestions.forEach((question) => {
+        question.addEventListener('click', () => {
+            console.log("あああ");
+            const faqItem = question.closest('.faq__item');
+
+            const isCurrentlyOpen = faqItem?.classList.contains('is-open') ?? false;
+
+            const allFaqItems = [...document.querySelectorAll('.faq__item')];
+
+            allFaqItems.forEach((item) => {
+                item.classList.remove('is-open');
+
+                const btn = item.querySelector('.faq__question');
+                btn?.setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isCurrentlyOpen) {
+                faqItem.classList.add('is-open');
+                question.setAttribute('aria-expanded', 'true');
+            }
         });
     });
 
