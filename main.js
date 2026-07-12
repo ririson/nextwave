@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     faqQuestions.forEach((question) => {
         question.addEventListener('click', () => {
-            console.log("あああ");
             const faqItem = question.closest('.faq__item');
 
             const isCurrentlyOpen = faqItem?.classList.contains('is-open') ?? false;
@@ -63,5 +62,58 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const modal = document.querySelector('#js-contact-modal');
+    const modalCloseBtn = document.querySelector('#js-modal-close');
 
+    const openModalBtns = document.querySelectorAll('.js-open-modal');
+
+    openModalBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            modal.classList.add('is-show');
+            modal.setAttribute('aria-hidden', 'false');
+
+            modalCloseBtn.focus();
+        });
+    });
+
+    const closeModal = () => {
+        modal.classList.remove('is-show');
+        modal.setAttribute('aria-hidden', 'true');
+    };
+
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    const modalOverlay = modal.querySelector('.modal__overlay');
+    modalOverlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (event) => {
+
+        if (event.key === 'Escape' && modal.classList.contains('is-show')) {
+            closeModal();
+        }
+    });
+
+    const contactForm = document.querySelector('#contact-form');
+
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        const data = Object.fromEntries(formData.entries());
+
+        console.log(`
+=============================
+フォーム送信データ:
+  名前: ${data.name}
+  メール: ${data.email}
+  内容: ${data.message}
+=============================
+        `);
+
+        alert('お問い合わせを受け付けました。ありがとうございます！');
+
+        contactForm.reset();
+        closeModal();
+    });
 });
